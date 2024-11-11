@@ -11,6 +11,7 @@ namespace oop_2024_11_11_collections.models
     {
         public static void Run()
         {
+            SalesTax();
             CountWords();
             CapitalCities();
             SimpleDictionary();
@@ -36,6 +37,23 @@ namespace oop_2024_11_11_collections.models
             }
         }
 
+        public static void SalesTax()
+        {
+            // Key value 
+            Dictionary<string, double> salesTax = new()
+            {
+                {"CA" , 0.075 },
+                {"NY" , 0.008 },
+                {"TX" , 0.068},
+            };
+
+            double caTax = salesTax["CA"]; // 
+
+            Console.WriteLine($"caTax is {caTax}");
+            //Iterate over the keys and values
+         
+        }
+
         public static void CountWords()
         {
             string[] words = { "apple", "banana", "orange", "banana", "apple", "banana", "BANANA" };
@@ -58,6 +76,8 @@ namespace oop_2024_11_11_collections.models
             {
                 Console.WriteLine($"{kvp.Key} appears {kvp.Value} times");
             }
+
+            Console.WriteLine($"The item at position 3 is {wordCounts.ElementAt(2)}");
          }
 
 
