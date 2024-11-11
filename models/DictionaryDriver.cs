@@ -50,6 +50,7 @@ namespace oop_2024_11_11_collections.models
                 else // first time it occurs
                 {
                     wordCounts[word.ToLower()] = 1;
+                   
                 }
             }
             // output
