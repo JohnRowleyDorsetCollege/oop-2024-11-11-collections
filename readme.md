@@ -7,4 +7,4 @@ countries:
 UK:London, France:Paris, Germany:Berlin, Ireland:Dublin
 
 Can you count the number of times each word is used?
-"apple","banana", "orange", "banana", "apple"
+"apple","banana", "orange", "banana", "apple","banana","banana"
