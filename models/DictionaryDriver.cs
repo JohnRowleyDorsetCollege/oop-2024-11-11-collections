@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -10,6 +11,7 @@ namespace oop_2024_11_11_collections.models
     {
         public static void Run()
         {
+            CountWords();
             CapitalCities();
             SimpleDictionary();
         }
@@ -33,6 +35,31 @@ namespace oop_2024_11_11_collections.models
                 Console.WriteLine($"Name: {kvp.Key} : {kvp.Value}");
             }
         }
+
+        public static void CountWords()
+        {
+            string[] words = { "apple", "banana", "orange", "banana", "apple", "banana", "BANANA" };
+            //  Console.WriteLine("")
+            Dictionary<string, int> wordCounts = new();
+            foreach (string word in words)
+            {
+                if (wordCounts.ContainsKey(word.ToLower()))
+                {
+                    wordCounts[word.ToLower()]++;
+                }
+                else // first time it occurs
+                {
+                    wordCounts[word.ToLower()] = 1;
+                }
+            }
+            // output
+            foreach(KeyValuePair<string,int> kvp in wordCounts)
+            {
+                Console.WriteLine($"{kvp.Key} appears {kvp.Value} times");
+            }
+         }
+
+
         public static void CapitalCities()
         {
             // Key value : string key, string value
@@ -72,6 +99,8 @@ namespace oop_2024_11_11_collections.models
 
                 Console.WriteLine($"The capital of Ireland is {capitalDictionary["Ireland"]}");
             }
+
+           
         }
 
     }
