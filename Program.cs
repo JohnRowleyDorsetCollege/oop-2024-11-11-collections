@@ -1,11 +1,11 @@
 ﻿// See https://aka.ms/new-console-template for more information
 using oop_2024_11_11_collections.models;
 
-Console.WriteLine("Collections");
+//Console.WriteLine("Collections");
 
 DictionaryDriver.Run();
 
-//CollectionDriver.Run();
+//StackDriver.Run();
 
 //string reversedString = CollectionDriver.ReverseString("Hello World");
 //Console.WriteLine(reversedString.ToLower());

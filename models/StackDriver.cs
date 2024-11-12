@@ -6,14 +6,14 @@ using System.Threading.Tasks;
 
 namespace oop_2024_11_11_collections.models
 {
-    public static  class CollectionDriver
+    public static  class StackDriver
     {
         public static void Run()
         {
             StackDemo();
-            string message = "Now is the winter of our discontent";
-            string reversedString = ReverseString(message);
-            Console.WriteLine(ReverseString(reversedString).ToLower());
+            //string message = "Now is the winter of our discontent";
+            //string reversedString = ReverseString(message);
+            //Console.WriteLine(ReverseString(reversedString).ToLower());
         }
         public static void StackDemo()
         {
@@ -34,18 +34,27 @@ namespace oop_2024_11_11_collections.models
 
             Console.WriteLine($"Popped element: {stack.Pop()}");
 
+
+
+
             Console.WriteLine($"Stack after popping an element:");
             foreach (int item in stack)
             {
                 Console.WriteLine(item);
             }
-
+            // bool is a type for indicating true or false
             bool exists = stack.Contains(10);
 
+            // if exists is true
             if (exists)
             {
                 Console.WriteLine("Stack contains 10");
             }
+
+
+
+
+
 
             Console.WriteLine($"The number of items in the stack is : {stack.Count}");
 
